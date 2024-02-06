@@ -19,7 +19,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 1.9fr 1fr;
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 50px;
   /* row-gap: 40px; */
@@ -56,33 +56,34 @@ body {
 .header-text-02 {
   font-size: 2.4rem;
   height: 20rem;
-  width: 80%;
+  padding: 1.2rem 1.1rem 1.2rem 1.8rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.4rem;
+  width: 90%;
   border-style: none;
+  border-radius: 15px;
   background: none;
+  resize: none;
 }
 
 .header-text-02::placeholder {
   color: #9dafc6;
 }
 
-.header-text {
+/* .header-text {
   font-size: 3.2rem;
   height: 20rem;
   padding-left: 2rem;
   border-style: none;
   background: none;
   color: #07274f;
-  border-radius: 20px;
-  /* border: 0.1px solid #dbdde3; */
+  border-radius: 20px; */
+/* border: 0.1px solid #dbdde3; */
 
-  /* CSS GRID */
-  grid-column: 1 / -1;
-  grid-row: 2 / -1;
-}
-
-.header-text::placeholder {
-  color: #9dafc6;
-}
+/* CSS GRID */
+/* grid-column: 1 / -1; */
+/* grid-row: 2 / -1; */
+/* } */
 
 .main {
   display: grid;
@@ -149,6 +150,7 @@ body {
 }
 
 .aside {
+  max-width: 90%;
   margin: 3.5rem 0 4rem 0;
   background-color: #fefeff;
   border-radius: 32px;
@@ -157,28 +159,43 @@ body {
   font-size: 40px;
   color: #fff;
 
+  /* CSS GRID */
   grid-column: 2 / 3;
   grid-row: 1 / -1;
 }
-
+h2 {
+  padding: 2.4rem;
+  text-align: center;
+  font-size: 2.4rem;
+  color: rgb(54, 39, 224);
+}
+p {
+  font-size: 1.8rem;
+  text-align: center;
+  color: red;
+}
 .aside-text {
-  font-size: 36px;
-  width: 350px;
-  height: 100px;
-  padding-left: 5px;
-  margin-top: 50px;
-  margin-left: 60px;
-  margin-bottom: 200px;
 }
 
 .aside-img {
-  height: 200px;
-  width: 400px;
-  margin-left: 30px;
-  background-color: aquamarine;
-  margin-bottom: 200px;
 }
 
-.aside-p {
-  margin-left: 200px;
+.btn--copiar {
+  font-size: 2.4rem;
+  font-weight: 700;
+  width: 24rem;
+  height: 6rem;
+  border-style: none;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  background-color: #ced7e3;
+  color: #0a3871;
+
+  transition: background-color 0.3s;
+}
+
+.btn--copiar:hover,
+.btn--copiar:active {
+  background-color: #9dafc6;
+  color: #fff;
 }
