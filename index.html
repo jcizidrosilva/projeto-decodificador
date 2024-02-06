@@ -26,17 +26,10 @@
 
           <div class="header-text-01">
             <textarea
-              class="header-text-02"
+              class="header-text-area"
               placeholder="Digite seu texto aqui"
             ></textarea>
-            <!-- name="" id="" cols="30" rows="10" -->
           </div>
-
-          <!-- <input
-            class="header-text"
-            type="text"
-            placeholder="Digite seu texto aqui"
-          /> -->
         </header>
         <main class="main">
           <p class="main-p">
@@ -50,22 +43,26 @@
           <button class="btn--descriptografar">Descriptografar</button>
         </main>
         <aside class="aside">
-          <div class="aisde-text-01">
-            <textarea
-              class="aside-text-02"
-              placeholder="Digite seu texto aqui"
-            ></textarea>
-          </div>
-          <div class="aside-img">
-            <img
-              src="./img/icons/right-icon.svg"
-              alt="icon of searching for something"
-            />
-            <h2>Nenhuma mensagem encontrada</h2>
-            <p>
-              Digite um texto que você deseja criptografar ou descriptografar
-            </p>
-            <button class="btn--copiar">Copiar</button>
+          <div class="aside-container">
+            <div class="aisde-text-01">
+              <textarea class="aside-text-area"></textarea>
+              <!-- placeholder="Digite seu texto aqui" -->
+            </div>
+            <div class="aside-img">
+              <img
+                src="./img/icons/right-icon.svg"
+                alt="icon of searching for something"
+              />
+              <h2 class="aside-nenhuma-mensagem">
+                Nenhuma mensagem encontrada
+              </h2>
+              <p class="aside-digite-um-texto">
+                Digite um texto que você deseja criptografar ou descriptografar
+              </p>
+              <div class="aside--btn--copiar">
+                <button class="btn--copiar">Copiar</button>
+              </div>
+            </div>
           </div>
         </aside>
       </div>

@@ -21,7 +21,7 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
-  column-gap: 50px;
+  column-gap: 5rem;
   /* row-gap: 40px; */
   /* padding: 40px; */
   height: 100vh;
@@ -53,7 +53,7 @@ body {
   grid-row: 2 / -1;
 }
 
-.header-text-02 {
+.header-text-area {
   font-size: 2.4rem;
   height: 20rem;
   padding: 1.2rem 1.1rem 1.2rem 1.8rem;
@@ -66,24 +66,9 @@ body {
   resize: none;
 }
 
-.header-text-02::placeholder {
+.header-text-area::placeholder {
   color: #9dafc6;
 }
-
-/* .header-text {
-  font-size: 3.2rem;
-  height: 20rem;
-  padding-left: 2rem;
-  border-style: none;
-  background: none;
-  color: #07274f;
-  border-radius: 20px; */
-/* border: 0.1px solid #dbdde3; */
-
-/* CSS GRID */
-/* grid-column: 1 / -1; */
-/* grid-row: 2 / -1; */
-/* } */
 
 .main {
   display: grid;
@@ -162,22 +147,46 @@ body {
   /* CSS GRID */
   grid-column: 2 / 3;
   grid-row: 1 / -1;
-}
-h2 {
-  padding: 2.4rem;
-  text-align: center;
-  font-size: 2.4rem;
-  color: rgb(54, 39, 224);
-}
-p {
-  font-size: 1.8rem;
-  text-align: center;
-  color: red;
-}
-.aside-text {
+  justify-self: end;
 }
 
-.aside-img {
+.aside-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside-text-area {
+  font-size: 1.8rem;
+  padding: 2.4rem;
+  height: 25rem;
+  line-height: 3.2rem;
+  letter-spacing: 0.4rem;
+  width: 100%;
+  border-style: none;
+  border-radius: 15px;
+  background: none;
+  resize: none;
+  /* background-color: #54749c; */
+}
+
+.aside-nenhuma-mensagem {
+  padding: 1.8rem;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #0a3871;
+  opacity: 90%;
+}
+
+.aside-digite-um-texto {
+  font-size: 1.4rem;
+  padding: 0 3rem 5rem 3rem;
+  text-align: center;
+  color: #07274f;
+  opacity: 50%;
+}
+
+.aside--btn--copiar {
+  text-align: center;
 }
 
 .btn--copiar {
@@ -188,14 +197,17 @@ p {
   border-style: none;
   border-radius: 20px;
   letter-spacing: 2px;
-  background-color: #ced7e3;
-  color: #0a3871;
+  /* background-color: #ced7e3; */
+  /* color: #0a3871; */
+  background-color: #54749c;
+  color: #e7ebf1;
 
-  transition: background-color 0.3s;
+  transition: background-color 0.1s;
+
+  display: none;
 }
 
-.btn--copiar:hover,
 .btn--copiar:active {
-  background-color: #9dafc6;
-  color: #fff;
+  background-color: #0a3871;
+  color: #ced7e3;
 }
