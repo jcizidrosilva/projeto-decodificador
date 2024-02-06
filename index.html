@@ -6,8 +6,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -18,14 +20,32 @@
     <div class="hero">
       <div class="container">
         <header class="header">
-          <h4>Logo</h4>
-          <input
+          <div class="header-logo">
+            <img src="./img/logos/alura-logo.png" alt="" />
+          </div>
+
+          <div class="header-text-01">
+            <textarea
+              class="header-text-02"
+              placeholder="Digite seu texto aqui"
+            ></textarea>
+            <!-- name="" id="" cols="30" rows="10" -->
+          </div>
+
+          <!-- <input
             class="header-text"
             type="text"
             placeholder="Digite seu texto aqui"
-          />
+          /> -->
         </header>
         <main class="main">
+          <p class="main-p">
+            <ion-icon
+              class="main-p-icon"
+              name="alert-circle-outline"
+            ></ion-icon>
+            Apenas letras minúsculas e sem acento
+          </p>
           <button class="btn--criptografar">Criptografar</button>
           <button class="btn--descriptografar">Descriptografar</button>
         </main>
@@ -40,5 +60,15 @@
         </aside>
       </div>
     </div>
+
+    <!-- IONICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>

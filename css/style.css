@@ -7,15 +7,19 @@
 html {
   font-size: 62.5%;
 }
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f3f5fc;
+}
 
 .hero {
-  background-color: rgb(102, 102, 102);
-  width: 100vw;
+  max-width: 140rem;
+  margin: 0 auto;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.9fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 50px;
   /* row-gap: 40px; */
@@ -24,47 +28,132 @@ html {
 }
 
 .header {
+  /* CSS GRID */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
   /* background-color: blueviolet; */
-  font-size: 100px;
-  color: #fff;
+}
+
+.header-logo {
+  align-self: self-start;
+  justify-self: left;
+  padding: 4rem;
+}
+
+.header-logo img {
+  height: 60px;
+}
+
+.header-text-01 {
+  padding-left: 2rem;
+  /* CSS GRID */
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+}
+
+.header-text-02 {
+  font-size: 2.4rem;
+  height: 20rem;
+  width: 80%;
+  border-style: none;
+  background: none;
+}
+
+.header-text-02::placeholder {
+  color: #9dafc6;
 }
 
 .header-text {
-  font-size: 36px;
-  width: 500px;
-  height: 100px;
-  padding-left: 5px;
-  margin-left: 100px;
+  font-size: 3.2rem;
+  height: 20rem;
+  padding-left: 2rem;
+  border-style: none;
+  background: none;
+  color: #07274f;
+  border-radius: 20px;
+  /* border: 0.1px solid #dbdde3; */
+
+  /* CSS GRID */
+  grid-column: 1 / -1;
+  grid-row: 2 / -1;
+}
+
+.header-text::placeholder {
+  color: #9dafc6;
 }
 
 .main {
   display: grid;
+  align-items: center;
+  justify-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: orangered;
+  /* background-color: orangered; */
 }
 
-.btn--criptografar {
+.main-p {
+  align-self: center;
+  justify-self: start;
+  font-size: 1.4rem;
+  color: #54749c;
+  margin-left: 2.4rem;
+  margin-bottom: 14rem;
   grid-column: 1 / 2;
   grid-row: 2 / -1;
+  display: flex;
+  align-items: center;
 }
 
-.btn--descriptografar {
-  grid-column: 2 / 3;
-  grid-row: 2 / -1;
+.main-p-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 0.5rem;
 }
 
 .btn--criptografar,
 .btn--descriptografar {
-  font-size: 3.2rem;
-  background-color: rgb(62, 232, 232);
-  padding: 2.4rem 2.4rem;
-  margin: 9rem 2rem;
-  border-radius: 50px;
+  font-size: 2.4rem;
+  width: 42rem;
+  height: 8rem;
+  border-style: none;
+  border-radius: 30px;
+  letter-spacing: 2px;
+
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn--criptografar {
+  background-color: #0a3871;
+  color: #fff;
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+}
+
+.btn--criptografar:hover,
+.btn--criptografar:active {
+  background-color: #07274f;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn--descriptografar {
+  background-color: #d8dfe8;
+  color: #54749c;
+  grid-column: 2 / 3;
+  grid-row: 2 / -1;
+}
+
+.btn--descriptografar:hover {
+  background-color: #e0e5ed;
 }
 
 .aside {
-  /* background-color: rgb(10, 56, 172); */
+  margin: 3.5rem 0 4rem 0;
+  background-color: #fefeff;
+  border-radius: 32px;
+  box-shadow: 0 1px 32px rgba(0, 0, 0, 0.1);
+
   font-size: 40px;
   color: #fff;
 
