@@ -192,6 +192,13 @@ body {
 
 .aside--btn--copiar {
   text-align: center;
+
+  /* Adding some codes */
+  display: flex;
+  justify-content: center;
+}
+.btn--copiar {
+  display: none;
 }
 
 .btn--copiar {
@@ -205,7 +212,7 @@ body {
   cursor: pointer;
   /* background-color: #ced7e3; */
   /* color: #0a3871; */
-  background-color: #54749c;
+  background-color: #0a3871;
   color: #e7ebf1;
 
   transition: background-color 0.1s;
