@@ -1,0 +1,20 @@
+{
+  "en": {
+    "btnCriptografar": "Encrypt",
+    "btnDescriptografar": "Decrypt",
+    "headerTextAreaPlaceholder": "Enter your text here",
+    "mainP": "Only lowercase letters and without accents",
+    "asideNenhumaMensagem": "No message found",
+    "asideDigiteUmTexto": "Enter a text you want to encrypt or decrypt",
+    "btnCopiar": "Copy"
+  },
+  "pt": {
+    "btnCriptografar": "Criptografar",
+    "btnDescriptografar": "Descriptografar",
+    "headerTextAreaPlaceholder": "Digite seu texto aqui",
+    "mainP": "Apenas letras minúsculas e sem acentos",
+    "asideNenhumaMensagem": "Nenhuma mensagem encontrada",
+    "asideDigiteUmTexto": "Digite um texto que você deseja criptografar ou descriptografar",
+    "btnCopiar": "Copiar"
+  }
+}

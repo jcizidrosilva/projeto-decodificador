@@ -116,6 +116,19 @@ body {
   align-items: center;
 }
 
+.main-p-text {
+  align-self: center;
+  justify-self: start;
+  font-size: 1.4rem;
+  color: #54749c;
+  margin-left: 2.4rem;
+  margin-bottom: 14rem;
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  display: flex;
+  align-items: center;
+}
+
 .main-p-icon {
   width: 2.4rem;
   height: 2.4rem;
@@ -132,7 +145,7 @@ body {
   letter-spacing: 2px;
   cursor: pointer;
 
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition: all 0.3s;
 }
 
 .btn--criptografar {
@@ -146,6 +159,7 @@ body {
 .btn--criptografar:active {
   background-color: #07274f;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
 }
 
 .btn--descriptografar {
@@ -157,6 +171,7 @@ body {
 
 .btn--descriptografar:hover {
   background-color: #e0e5ed;
+  transform: scale(1.01);
 }
 
 .aside {
@@ -255,12 +270,14 @@ body {
   background-color: #0a3871;
   color: #e7ebf1;
 
-  transition: background-color 0.1s;
+  transition: transform 0.3s background-color 0.3s;
 }
 
+.btn--copiar:hover,
 .btn--copiar:active {
-  background-color: #0a3871;
+  background-color: #1b549b;
   color: #ced7e3;
+  transform: scale(1.01);
 }
 
 .footer-p {

@@ -135,75 +135,85 @@ asideBtnCopiar.addEventListener("click", function () {
 
   // Removendo mensagem anterior e adicionando uma nova mensagem
   asideTextArea.value = "";
-  asideTextArea.placeholder = "Texto copiado com sucesso! Cole onde desejar.";
+  asideTextArea.placeholder = "Copied / Copiado.";
   asideTextArea.style.fontSize = "2rem";
   asideTextArea.style.color = "#0a3871";
 });
 
-//
-//
-//
-//
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-////
-//
-//
-// //Adicionando um evento ao botao descriptografar
-// btnDescriptografar.addEventListener("click", function () {
-//   // Obtendo a mensagem criptografada do headerTextArea
-//   let mensagemCriptografada = headerTextArea.value;
-//   // console.log(mensagemCriptografada);
+// Adicionando traducao
+document.addEventListener("DOMContentLoaded", function () {
+  // Elementos HTML das bandeiras
+  const brazilFlag = document.querySelector(".header-brazil");
+  const usaFlag = document.querySelector(".header-usa");
 
-//   //Agora vamos exibir a mensagem criptografada no asideTextArea
-//   asideTextArea.value = mensagemCriptografada;
+  // Elementos HTML para tradução
+  const headerTextArea = document.querySelector(".header-text-area");
+  const mainP = document.querySelector(".main-p-text");
 
-//   // Agora vamos remover a mensagem criada ao clicar no botao copiar
-//   asideTextArea.placeholder = "";
-// });
-//
-//
-//
-// codigo que nao funcionou
-// // Adicionando um evento ao botao criptografar
-// btnCriptografar.addEventListener("click", function () {
-//   // Obtendo o texto digitado pelo usuario
-//   let texto = headerTextArea.value;
+  // Botões Criptografar e Descriptografar
+  const btnCriptografar = document.querySelector(".btn--criptografar");
+  const btnDescriptografar = document.querySelector(".btn--descriptografar");
 
-//   // Agora vamos percorrer o texto aplicando a criptografia
-//   substituicoes.forEach((substituicao) => {
-//     texto = texto.replace(
-//       new RegExp(substituicao.original, "g"),
-//       substituicao.substituto
-//     );
-//   });
+  // Elemento HTML para tradução do h2 com a classe aside-nenhuma-mensagem
+  const asideNenhumaMensagem = document.querySelector(
+    ".aside-nenhuma-mensagem"
+  );
 
-//   // Agora vamos exibir a criptografia
-//   asideTextArea.value = texto;
+  // Elemento HTML para tradução do p com a classe aside-digite-um-texto
+  const asideDigiteUmTexto = document.querySelector(".aside-digite-um-texto");
 
-//   // Agora vamos limpar o texto digitado pelo usuario no headerTextArea
-//   headerTextArea.value = "";
-// });
+  // Elemento HTML para tradução do botão copiar com a classe btn--copiar
+  const btnCopiar = document.querySelector(".btn--copiar");
 
-//
-//
-//
+  // Objeto para armazenar as traduções
+  let translations = {};
+
+  // Função para alternar entre os idiomas
+  function toggleLanguage(language) {
+    // Atualiza o conteúdo dos botões Criptografar e Descriptografar com base no idioma selecionado
+    btnCriptografar.textContent = translations[language].btnCriptografar;
+    btnDescriptografar.textContent = translations[language].btnDescriptografar;
+
+    // Atualiza o placeholder da área de texto do cabeçalho com base no idioma selecionado
+    headerTextArea.placeholder =
+      translations[language].headerTextAreaPlaceholder;
+
+    // Atualiza o texto da mensagem principal com base no idioma selecionado
+    mainP.textContent = translations[language].mainP;
+
+    // Atualiza o texto do h2 com a classe aside-nenhuma-mensagem com base no idioma selecionado
+    asideNenhumaMensagem.textContent =
+      translations[language].asideNenhumaMensagem;
+
+    // Atualiza o texto do p com a classe aside-digite-um-texto com base no idioma selecionado
+    asideDigiteUmTexto.textContent = translations[language].asideDigiteUmTexto;
+
+    // Atualiza o texto do botão copiar com base no idioma selecionado
+    btnCopiar.textContent = translations[language].btnCopiar;
+  }
+
+  // Evento de clique na bandeira do Brasil
+  brazilFlag.addEventListener("click", function () {
+    toggleLanguage("pt");
+  });
+
+  // Evento de clique na bandeira dos EUA
+  usaFlag.addEventListener("click", function () {
+    toggleLanguage("en");
+  });
+
+  // Função para carregar as traduções do arquivo JSON
+  function loadTranslations() {
+    fetch("translations.json")
+      .then((response) => response.json())
+      .then((data) => {
+        translations = data;
+        // Define o idioma padrão
+        toggleLanguage("en");
+      })
+      .catch((error) => console.error("Erro ao carregar traduções:", error));
+  }
+
+  // Carrega as traduções quando a página é carregada
+  loadTranslations();
+});
