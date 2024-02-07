@@ -3,7 +3,7 @@ const headerTextArea = document.querySelector(".header-text-area");
 const btnCriptografar = document.querySelector(".btn--criptografar");
 const btnDescriptografar = document.querySelector(".btn--descriptografar");
 const asideTextArea = document.querySelector(".aside-text-area");
-const asieImg = document.querySelector(".aside-img");
+const asideImg = document.querySelector(".aside-img");
 const asideNenhumaMensagem = document.querySelector(".aside-nenhuma-mensagem");
 const asideDigiteUmTexto = document.querySelector(".aside-digite-um-texto");
 const asideBtnCopiar = document.querySelector(".btn--copiar");
@@ -35,10 +35,19 @@ asideBtnCopiar.style.display = "none";
 // Adicionando um ouvinte de evento de clique ao botão Criptografar
 btnCriptografar.addEventListener("click", function () {
   // Obtendo o texto digitado pelo usuário no headerTextArea
-  let textoCriptografar = headerTextArea.value;
+  let textoCriptografar = headerTextArea.value.trim(); // Removendo espacos vazios da string
 
   // Removendo acentos e convertendo para letras minúsculas somente
   textoCriptografar = removerAcentos(textoCriptografar).toLowerCase();
+
+  // mudanca
+  // Verificando se há texto no headerTextArea
+  if (textoCriptografar === "") {
+    // Exibir uma mensagem pedindo ao usuário que insira um texto
+    alert("Por favor, insira um texto antes de criptografar.");
+    return; // Sair da função se não houver texto
+  }
+  // mudanca
 
   // Aplicando as substituições com base no array substituicoes
   substituicoes.forEach((substituicao) => {
@@ -54,8 +63,60 @@ btnCriptografar.addEventListener("click", function () {
   // Limpando o texto digitado no headerTextArea
   headerTextArea.value = "";
 
+  // Esconder a imagem correct-1 e as mensagens do aside
+  asideImg.querySelector(".correct-1").style.display = "none";
+  asideImg.querySelector(".correct-2").style.display = "block";
+  asideNenhumaMensagem.style.display = "none";
+  asideDigiteUmTexto.style.display = "none";
+
   // Exibindo o botão Copiar
   asideBtnCopiar.style.display = "block";
+});
+
+// Criando a Descriptografia usando um array
+const descriptografia = [
+  { original: "enter", substituto: "e" },
+  { original: "imes", substituto: "i" },
+  { original: "ai", substituto: "a" },
+  { original: "ober", substituto: "o" },
+  { original: "ufat", substituto: "u" },
+];
+
+// Adicionando um evento ao botao descriptografar
+btnDescriptografar.addEventListener("click", function () {
+  // Obtendo a mensagem criptografada do headerTextArea
+  let mensagemCriptografada = headerTextArea.value.trim(); // Removendo espacos vazios da string
+
+  //mudanca
+  // Verificando se há texto no headerTextArea
+  if (mensagemCriptografada === "") {
+    // Exibir uma mensagem pedindo ao usuário que insira um texto
+    alert("Por favor, insira um texto antes de descriptografar.");
+    return; // Sair da função se não houver texto
+  }
+  // mudanca
+
+  // Função para descriptografar a mensagem
+  function descriptografarMensagem(mensagem) {
+    return mensagem
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
+  }
+
+  // Descriptografar a mensagem
+  let mensagemDescriptografada = descriptografarMensagem(mensagemCriptografada);
+
+  // Exibir a mensagem descriptografada no asideTextArea
+  asideTextArea.value = mensagemDescriptografada;
+
+  // Limpar o headerTextArea
+  headerTextArea.value = "";
+
+  // Remover a mensagem "Texto copiado com sucesso!" do asideTextArea, se estiver presente
+  asideTextArea.placeholder = "";
 });
 
 // Adicionando funcionalidade ao botao copiar
@@ -80,6 +141,45 @@ asideBtnCopiar.addEventListener("click", function () {
 });
 
 //
+//
+//
+//
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+////
+//
+//
+// //Adicionando um evento ao botao descriptografar
+// btnDescriptografar.addEventListener("click", function () {
+//   // Obtendo a mensagem criptografada do headerTextArea
+//   let mensagemCriptografada = headerTextArea.value;
+//   // console.log(mensagemCriptografada);
+
+//   //Agora vamos exibir a mensagem criptografada no asideTextArea
+//   asideTextArea.value = mensagemCriptografada;
+
+//   // Agora vamos remover a mensagem criada ao clicar no botao copiar
+//   asideTextArea.placeholder = "";
+// });
 //
 //
 //
