@@ -1,0 +1,80 @@
+/* **************************** */
+/* BELOW 500px (Mobile phones)*/
+/* **************************** */
+
+@media (max-width: 34em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .flags {
+    margin-right: 1rem;
+  }
+
+  .flags img {
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .header-logo img {
+    height: 30px;
+  }
+
+  .header-text-area {
+    font-size: 1.8rem;
+    height: 8rem;
+  }
+  .btn--criptografar,
+  .btn--descriptografar {
+    width: 36rem;
+    height: 6rem;
+  }
+
+  .btn--criptografar {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 8rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn--descriptografar {
+    grid-column: 1;
+    grid-row: 2 / 3;
+    margin-left: 8rem;
+  }
+
+  .main-p-text {
+    display: none;
+  }
+
+  .footer-p {
+    display: none;
+  }
+  .aside {
+    margin-left: 2.6rem;
+  }
+  .aside-text-area {
+    height: 16rem;
+  }
+  .main-p-icon {
+    display: none;
+  }
+
+  .footer-icon-github,
+  .footer-icon-linkedin {
+    display: none;
+  }
+
+  .correct-1 {
+    display: none;
+  }
+
+  .correct-2 {
+    height: 5%;
+    opacity: 0;
+  }
+
+  .aside--btn--copiar {
+    margin-bottom: 3rem;
+  }
+}
