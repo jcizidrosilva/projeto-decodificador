@@ -44,7 +44,7 @@ btnCriptografar.addEventListener("click", function () {
   // Verificando se há texto no headerTextArea
   if (textoCriptografar === "") {
     // Exibir uma mensagem pedindo ao usuário que insira um texto
-    alert("Por favor, insira um texto antes de criptografar.");
+    alert("Please insert a text before encrypting.");
     return; // Sair da função se não houver texto
   }
   // mudanca
@@ -91,7 +91,7 @@ btnDescriptografar.addEventListener("click", function () {
   // Verificando se há texto no headerTextArea
   if (mensagemCriptografada === "") {
     // Exibir uma mensagem pedindo ao usuário que insira um texto
-    alert("Por favor, insira um texto antes de descriptografar.");
+    alert("Please, enter a text before decrypting.");
     return; // Sair da função se não houver texto
   }
   // mudanca
