@@ -32,8 +32,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
-  /* background-color: blueviolet; */
 }
 
 .header-logo {
@@ -100,7 +98,6 @@ body {
   justify-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  /* background-color: orangered; */
 }
 
 .main-p {
@@ -206,7 +203,6 @@ body {
   border-radius: 15px;
   background: none;
   resize: none;
-  /* background-color: #54749c; */
 }
 
 .aside-text-area:focus {

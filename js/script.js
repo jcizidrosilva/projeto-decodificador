@@ -32,7 +32,6 @@ const substituicoes = [
 // Ocultando o botao copiar
 asideBtnCopiar.style.display = "none";
 
-// Novo Codigo com alert()
 // Adicionando um evento ao botão Criptografar
 btnCriptografar.addEventListener("click", function () {
   // Obtendo o texto digitado pelo usuário no headerTextArea
@@ -73,47 +72,6 @@ btnCriptografar.addEventListener("click", function () {
   asideBtnCopiar.style.display = "block";
 });
 
-// // Adicionando um ouvinte de evento de clique ao botão Criptografar
-// btnCriptografar.addEventListener("click", function () {
-//   // Obtendo o texto digitado pelo usuário no headerTextArea
-//   let textoCriptografar = headerTextArea.value.trim(); // Removendo espacos vazios da string
-
-//   // Removendo acentos e convertendo para letras minúsculas somente
-//   textoCriptografar = removerAcentos(textoCriptografar).toLowerCase();
-
-//   // mudanca
-//   // Verificando se há texto no headerTextArea
-//   if (textoCriptografar === "") {
-//     // Exibir uma mensagem pedindo ao usuário que insira um texto
-//     alert("Please insert a text before encrypting.");
-//     return; // Sair da função se não houver texto
-//   }
-//   // mudanca
-
-//   // Aplicando as substituições com base no array substituicoes
-//   substituicoes.forEach((substituicao) => {
-//     textoCriptografar = textoCriptografar.replace(
-//       new RegExp(substituicao.original, "g"),
-//       substituicao.substituto
-//     );
-//   });
-
-//   // Exibindo o resultado do texto criptografado no asideTextArea
-//   asideTextArea.value = textoCriptografar;
-
-//   // Limpando o texto digitado no headerTextArea
-//   headerTextArea.value = "";
-
-//   // Esconder a imagem correct-1 e as mensagens do aside
-//   asideImg.querySelector(".correct-1").style.display = "none";
-//   asideImg.querySelector(".correct-2").style.display = "block";
-//   asideNenhumaMensagem.style.display = "none";
-//   asideDigiteUmTexto.style.display = "none";
-
-//   // Exibindo o botão Copiar
-//   asideBtnCopiar.style.display = "block";
-// });
-
 // Criando a Descriptografia usando um array
 const descriptografia = [
   { original: "enter", substituto: "e" },
@@ -128,14 +86,12 @@ btnDescriptografar.addEventListener("click", function () {
   // Obtendo a mensagem criptografada do headerTextArea
   let mensagemCriptografada = headerTextArea.value.trim(); // Removendo espacos vazios da string
 
-  //mudanca
   // Verificando se há texto no headerTextArea
   if (mensagemCriptografada === "") {
     // Exibir uma mensagem pedindo ao usuário que insira um texto
     alert("Please, enter a text before decrypting.");
     return; // Sair da função se não houver texto
   }
-  // mudanca
 
   // Função para descriptografar a mensagem
   function descriptografarMensagem(mensagem) {
