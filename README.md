@@ -1,6 +1,6 @@
-# projeto-decodificador
+# Projeto Decodificador de Mensagens
 
-<h2>Descrição do Projeto:</h2>
+<h3>Descrição do Projeto:</h3>
 
 <p>Desenvolvi uma aplicação capaz de criptografar e descriptografar mensagens, permitindo a troca segura de informações entre pessoas que compartilham o segredo da codificação.
 Utilizamos um conjunto específico de "chaves" de criptografia:</p>
@@ -21,11 +21,13 @@ Utilizamos um conjunto específico de "chaves" de criptografia:</p>
  </ol>
  
 <h3>Por exemplo:</h3>
-"gato" foi transformado em "gaitober"
-"gaitober" foi revertido para "gato"
-Além disso, esta página oferece campos para inserção do texto a ser criptografado ou descriptografado, com a opção para o usuário escolher entre ambas as funcionalidades. O resultado é exibido instantaneamente na tela.
-Recursos Adicionais:
-Implementamos um botão para copiar o texto criptografado/descriptografado para a área de transferência, facilitando o compartilhamento das mensagens.
 
+<p>"gato" foi transformado em "gaitober"</p>
+<p>"gaitober" foi revertido para "gato"</p>
 
-#challengeonedecodificador5
+<h4>Além disso, esta página oferece campos para inserção do texto a ser criptografado ou descriptografado, com a opção para o usuário escolher entre ambas as funcionalidades. O resultado é exibido instantaneamente na tela.</h4>
+
+<p>Recursos Adicionais:</p>
+
+<p>Implementamos um botão para copiar o texto criptografado/descriptografado para a área de transferência, facilitando o compartilhamento das mensagens.</p>
+
