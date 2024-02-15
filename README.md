@@ -1,33 +1,32 @@
-# Projeto Decodificador de Mensagens
+# Project: Message Decoder
 
-<h3>Descrição do Projeto:</h3>
+<h3>Project Description::</h3>
 
-<p>Desenvolvi uma aplicação capaz de criptografar e descriptografar mensagens, permitindo a troca segura de informações entre pessoas que compartilham o segredo da codificação.
-Utilizamos um conjunto específico de "chaves" de criptografia:</p>
+<p>I have developed an application capable of encrypting and decrypting messages, allowing for secure information exchange between individuals who share the encoding secret. We use a specific set of encryption "keys":</p>
 
 <ul>
- <li>"e" foi convertido para "enter"</li>
- <li>"i" foi convertido para "imes"</li>
- <li>"a" foi convertido para "ai"</li>
- <li>"o" foi convertido para "ober"</li>
- <li>"u" foi convertido para "ufat"</li>
+ <li>"e" has been converted to "enter"</li>
+ <li>"i" has been converted to "imes"</li>
+ <li>"a" has been converted to "ai"</li>
+ <li>"o" has been converted to "ober"</li>
+ <li>"u" has been converted to "ufat"</li>
  </ul>
  
-<h3>Requisitos do projeto:</h3>
+<h3>Project Requirements:</h3>
 <ol>
- <li>Funcionamento exclusivo com letras minúsculas.</li>
- <li>Ausência de letras acentuadas ou caracteres especiais.</li>
- <li>Capacidade de converter uma palavra para sua versão criptografada e vice-versa.</li>
+ <li>Exclusive operation with lowercase letters.</li>
+ <li>Absence of accented letters or special characters.</li>
+ <li>Ability to convert a word to its encrypted version and vice versa.</li>
  </ol>
  
-<h3>Por exemplo:</h3>
+<h3>For example:</h3>
 
-<p>"gato" foi transformado em "gaitober"</p>
-<p>"gaitober" foi revertido para "gato"</p>
+<p>"family" has been transformed into "faimimesly"</p>
+<p>"faimimesly" has been reversed to "family"</p>
 
-<h4>Além disso, esta página oferece campos para inserção do texto a ser criptografado ou descriptografado, com a opção para o usuário escolher entre ambas as funcionalidades. O resultado é exibido instantaneamente na tela.</h4>
+<h4>Furthermore, this page provides fields for entering the text to be encrypted or decrypted, with the option for the user to choose between both functionalities. The result is instantly displayed on the screen.</h4>
 
-<p>Recursos Adicionais:</p>
+<p>Additional Features:</p>
 
-<p>Implementamos um botão para copiar o texto criptografado/descriptografado para a área de transferência, facilitando o compartilhamento das mensagens.</p>
+<p>We have implemented a button to copy the encrypted/decrypted text to the clipboard, facilitating the sharing of messages.</p>
 
