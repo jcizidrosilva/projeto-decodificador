@@ -1,6 +1,6 @@
 # Project: Message Decoder
 
-<h3>Project Description::</h3>
+<h3>Project Description:</h3>
 
 <p>I have developed an application capable of encrypting and decrypting messages, allowing for secure information exchange between individuals who share the encoding secret. We use a specific set of encryption "keys":</p>
 
