@@ -31,3 +31,5 @@
 <p>We have implemented a button to copy the encrypted/decrypted text to the clipboard, facilitating the sharing of messages.</p>
 
 <h3><a href="https://jcizidrosilva.github.io/projeto-decodificador/" target="_blank">Link for the project</a></h3>
+
+<img src="./img/1.jpg" alt="image of the projetc decoder">
